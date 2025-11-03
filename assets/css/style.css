@@ -1,17 +1,159 @@
-/* ABOUT PAGE STYLES */
-.about-hero {
+/* =============================
+   MAJER-ENTERPRISES — GLOBAL STYLES
+   Author: Mike Mulili
+   Version: 1.0
+============================= */
+
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar {
+  background: #ffffff;
+  color: #004aad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #004aad;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #004aad;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #0077ff;
+}
+
+.navbar nav a.active {
+  color: #0077ff;
+  border-bottom: 2px solid #0077ff;
+  padding-bottom: 4px;
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #004aad;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #003580;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   ABOUT PAGE
+============================= */
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
               url('images/hero-bg.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
 }
 
-.about-content, .mission-vision, .why-us {
-  padding: 60px 20px;
+.about-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.about-content h2, .why-us h2 {
+.about-hero p {
+  font-size: 1.1em;
+  color: #e0e0e0;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #004aad;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #003580;
+  transform: translateY(-2px);
+}
+
+/* =============================
+   CONTENT SECTIONS
+============================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+h2.section-title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+/* ABOUT DETAILS */
+.about-content h2 {
   text-align: center;
   margin-bottom: 30px;
   color: #004aad;
@@ -29,40 +171,94 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  align-items: start;
 }
 
 .mission, .vision {
   flex: 1;
   min-width: 280px;
-  background: #f8f9fb;
+  background: #ffffff;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-.why-us .reasons {
+/* WHY US SECTION */
+.why-us h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.reasons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  margin-top: 30px;
 }
 
-.why-us .card {
-  background: white;
+.reasons .card {
+  background: #fff;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
 }
 
-.why-us .card:hover {
+.reasons .card:hover {
   transform: translateY(-5px);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
+.reasons .card h4 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/* =============================
+   BUTTONS
+============================= */
+.btn-primary {
   background: #004aad;
-  color: white;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #003580;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  background: #004aad;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.95em;
+  margin-top: 60px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
 }
