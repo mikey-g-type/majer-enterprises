@@ -1,37 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | MAJER-ENTERPRISES</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MAJER ENTERPRISES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .back-btn {
+            background: #2563eb;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #60a5fa;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            padding: 15px 25px;
+            border-radius: 10px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        a {
+            text-decoration: none;
+            color: #93c5fd;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>MAJER ENTERPRISES</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </header>
 
-  <section class="contact-section">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Reach us through any of the following:</p>
+    <div class="container">
+        <h1>Contact MAJER ENTERPRISES</h1>
+        <p>Reach out to us for toner and cartridge supplies, inquiries, or orders. We’re here to help!</p>
 
-    <div class="contact-options">
-      <a href="tel:+254700123456" class="contact-btn call">📞 Call Us</a>
-      <a href="https://wa.me/254700123456" target="_blank" class="contact-btn whatsapp">💬 WhatsApp</a>
-      <a href="https://www.facebook.com/majerenterprises" target="_blank" class="contact-btn facebook">📘 Facebook</a>
+        <div class="contact-options">
+            <div class="contact-card">
+                📞 <a href="tel:+254700000000">Call Us: +254 700 000 000</a>
+            </div>
+            <div class="contact-card">
+                💬 <a href="https://wa.me/254700000000" target="_blank">Chat on WhatsApp</a>
+            </div>
+            <div class="contact-card">
+                📘 <a href="https://www.facebook.com/MAJERENTERPRISES" target="_blank">Visit Our Facebook Page</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 MAJER ENTERPRISES | All Rights Reserved.
+        </footer>
     </div>
-
-    <a href="index.html" class="back-btn">← Back to Home</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 MAJER ENTERPRISES. All Rights Reserved.</p>
-  </footer>
 </body>
 </html>
-
