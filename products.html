@@ -3,54 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | MAJER ENTERPRISES</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+  <title>Products - MAJER ENTERPRISES</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* PRODUCTS PAGE STYLES */
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <!-- Header -->
-  <header class="bg-blue-900 text-white py-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <h1 class="text-2xl font-bold">MAJER ENTERPRISES</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="about.html" class="hover:text-yellow-300">About</a>
-        <a href="products.html" class="hover:text-yellow-300 font-semibold underline">Products</a>
-        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      </nav>
-    </div>
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .price {
+      font-size: 1.1em;
+      color: #008000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Products</h1>
+    <p>Quality Toners & Cartridges at Affordable Prices</p>
   </header>
 
-  <!-- Products Section -->
-  <section class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-10 text-blue-900 text-center">Our Toners & Cartridges</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-        <img src="assets/images/hp-toner.jpg" alt="HP Toner" class="w-full h-48 object-contain mb-4">
-        <h3 class="text-xl font-bold text-blue-900">HP Toners</h3>
-        <p class="mt-2">Original and compatible HP toners suitable for a wide range of printers.</p>
+  <section class="product-grid">
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <img src="assets/images/toner1.jpg" alt="HP Toner 26A">
+      <div class="product-info">
+        <h3>HP Toner 26A</h3>
+        <p class="price">KSh 8,500</p>
       </div>
+    </div>
 
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-        <img src="assets/images/canon-toner.jpg" alt="Canon Toner" class="w-full h-48 object-contain mb-4">
-        <h3 class="text-xl font-bold text-blue-900">Canon Cartridges</h3>
-        <p class="mt-2">High-quality cartridges ensuring crisp and reliable printing for Canon users.</p>
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <img src="assets/images/toner2.jpg" alt="Canon Cartridge 057">
+      <div class="product-info">
+        <h3>Canon Cartridge 057</h3>
+        <p class="price">KSh 7,200</p>
       </div>
+    </div>
 
-      <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-        <img src="assets/images/epson-toner.jpg" alt="Epson Toner" class="w-full h-48 object-contain mb-4">
-        <h3 class="text-xl font-bold text-blue-900">Epson Toners</h3>
-        <p class="mt-2">Efficient and durable toner options ideal for both office and personal use.</p>
+    <!-- PRODUCT 3 -->
+    <div class="product-card">
+      <img src="assets/images/toner3.jpg" alt="Epson Ink Bottle 664">
+      <div class="product-info">
+        <h3>Epson Ink Bottle 664</h3>
+        <p class="price">KSh 1,200</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card">
+      <img src="assets/images/toner4.jpg" alt="Brother TN-660 Toner">
+      <div class="product-info">
+        <h3>Brother TN-660 Toner</h3>
+        <p class="price">KSh 9,000</p>
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    <p>&copy; 2025 MAJER ENTERPRISES. All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
-
