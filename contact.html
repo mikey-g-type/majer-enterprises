@@ -13,19 +13,16 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            background: #0f172a;
             color: #f8fafc;
-            display: flex;
-            flex-direction: column;
             min-height: 100vh;
-            align-items: center;
-            justify-content: center;
         }
 
         header {
             position: absolute;
             top: 20px;
             left: 20px;
+            z-index: 10;
         }
 
         .back-btn {
@@ -41,7 +38,35 @@
             background: #1d4ed8;
         }
 
+        /* Hero / Image Section */
+        .hero {
+            background-image: url('assets/images/contact.jpg');
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .hero h1 {
+            position: relative;
+            font-size: 2.5em;
+            z-index: 1;
+        }
+
         .container {
+            max-width: 900px;
+            margin: -80px auto 40px; /* Pull container up over hero */
             background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 16px;
@@ -50,28 +75,28 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #60a5fa;
-        }
-
         p {
             color: #cbd5e1;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 
+        /* Contact Options Grid */
         .contact-options {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .contact-card {
             background: rgba(255,255,255,0.08);
-            padding: 15px 25px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 12px;
             transition: transform 0.3s, background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1em;
         }
 
         .contact-card:hover {
@@ -83,7 +108,6 @@
             text-decoration: none;
             color: #93c5fd;
             font-weight: 500;
-            font-size: 1.1em;
         }
 
         a:hover {
@@ -95,6 +119,13 @@
             color: #64748b;
             font-size: 0.9em;
         }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8em;
+                padding: 0 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,19 +133,22 @@
         <a href="index.html" class="back-btn">← Back to Home</a>
     </header>
 
-    <div class="container">
+    <section class="hero">
         <h1>Contact MAJER ENTERPRISES</h1>
+    </section>
+
+    <div class="container">
         <p>Reach out to us for toner and cartridge supplies, inquiries, or orders. We’re here to help!</p>
 
         <div class="contact-options">
             <div class="contact-card">
-                📞 <a href="tel:+254700000000">Call Us: +254 700 000 000</a>
+                📞 <a href="tel:+254700000000">+254 700 000 000</a>
             </div>
             <div class="contact-card">
                 💬 <a href="https://wa.me/254700000000" target="_blank">Chat on WhatsApp</a>
             </div>
             <div class="contact-card">
-                📘 <a href="https://www.facebook.com/MAJERENTERPRISES" target="_blank">Visit Our Facebook Page</a>
+                📘 <a href="https://www.facebook.com/MAJERENTERPRISES" target="_blank">Facebook Page</a>
             </div>
         </div>
 
