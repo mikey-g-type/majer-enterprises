@@ -213,8 +213,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  menuBtn.addEventListener("click", function () {
+  menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+
+  // ✅ Auto close when clicking a link (mobile UX fix)
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
   });
 });
 </script>
