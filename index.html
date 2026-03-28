@@ -63,11 +63,14 @@
 <!-- NAVBAR -->
 <header class="bg-white shadow sticky top-0 z-50">
   <div class="container mx-auto flex justify-between items-center p-4">
+    
+    <!-- LOGO -->
     <div class="flex items-center space-x-3">
       <img src="assets/images/logo.png" class="w-10 h-10">
       <h1 class="text-xl font-bold text-blue-900">MAJER ENTERPRISES</h1>
     </div>
 
+    <!-- DESKTOP NAV -->
     <nav class="hidden md:flex space-x-8 font-medium">
       <a href="index.html" class="text-blue-600 font-semibold">Home</a>
       <a href="products.html" class="hover:text-blue-600">Products</a>
@@ -75,14 +78,20 @@
       <a href="contact.html" class="hover:text-blue-600">Contact</a>
     </nav>
 
-    <button id="menu-btn" class="md:hidden text-2xl cursor-pointer">☰</button>
+    <!-- MOBILE BUTTON -->
+    <button id="menu-btn" class="md:hidden text-2xl cursor-pointer focus:outline-none">
+      ☰
+    </button>
   </div>
 
-  <div id="mobile-menu" class="hidden px-6 pb-4 md:hidden">
-    <a href="index.html" class="block py-2 font-semibold">Home</a>
-    <a href="products.html" class="block py-2">Products</a>
-    <a href="about.html" class="block py-2">About</a>
-    <a href="contact.html" class="block py-2">Contact</a>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu"
+       class="hidden md:hidden bg-white border-t shadow-md px-6 py-4 space-y-3">
+
+    <a href="index.html" class="block font-semibold text-blue-600">Home</a>
+    <a href="products.html" class="block hover:text-blue-600">Products</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
   </div>
 </header>
 
@@ -217,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("hidden");
   });
 
-  // ✅ Auto close when clicking a link (mobile UX fix)
+  // Close menu when a link is clicked (mobile UX fix)
   document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
