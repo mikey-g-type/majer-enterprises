@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | MAJER ENTERPRISES</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      backdrop-filter: blur(8px);
+    }
+
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center space-x-3">
+      <img src="assets/images/logo.png" class="w-10 h-10">
+      <h1 class="text-xl font-bold text-blue-900">MAJER ENTERPRISES</h1>
+    </div>
+
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="products.html" class="hover:text-blue-600">Products</a>
+      <a href="about.html" class="text-blue-600 font-semibold">About</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="hidden px-6 pb-4 md:hidden">
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="about.html" class="block py-2 font-semibold">About</a>
+    <a href="products.html" class="block py-2">Products</a>
+    <a href="contact.html" class="block py-2">Contact</a>
+  </div>
+</header>
+
+<!-- HERO (MATCHED STYLE) -->
+<section class="text-white text-center py-24 px-6"
+  style="background: linear-gradient(rgba(5, 74, 114, 0.6), rgba(0,0,0,0.6)),
+         url('assets/images/about-bg.jpg');
+         background-size: cover;
+         background-position: center;">
+  
+  <h1 class="text-4xl md:text-5xl font-bold mb-3">
+    About MAJER ENTERPRISES
+  </h1>
+  <p class="text-lg">
+    Reliable • Affordable • Quality Printing Solutions
+  </p>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="container mx-auto py-16 px-6 text-center">
+  <p class="max-w-3xl mx-auto text-lg text-gray-700">
+    MAJER ENTERPRISES is a trusted supplier of high-quality printer cartridges, toner, and office supplies, dedicated to supporting businesses, institutions, and individuals with reliable and cost-effective printing solutions.
+  </p>
+
+  <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+    With operations across Kenya and South Sudan, we have established ourselves as a dependable partner for organizations that require consistent performance and uninterrupted printing services. Our focus is on delivering products that meet high standards while maintaining affordability and accessibility.
+  </p>
+
+  <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+    We understand how critical printing is to daily operations, which is why we prioritize fast response, product availability, and customer satisfaction. Whether serving small offices or large institutions, we aim to provide solutions that improve efficiency and reduce downtime.
+  </p>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="bg-white py-16 px-6">
+  <div class="container mx-auto grid md:grid-cols-2 gap-10">
+
+    <div class="bg-gray-100 p-8 rounded-2xl shadow text-center">
+      <h3 class="text-2xl font-bold text-blue-900 mb-3">Our Mission</h3>
+      <p class="text-gray-700">
+        To provide high-quality, affordable printing supplies that enable businesses and individuals to operate efficiently without interruptions.
+      </p>
+    </div>
+
+    <div class="bg-gray-100 p-8 rounded-2xl shadow text-center">
+      <h3 class="text-2xl font-bold text-blue-900 mb-3">Our Vision</h3>
+      <p class="text-gray-700">
+        To become a leading provider of printing solutions in East Africa by delivering reliability, value, and excellent customer service.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container mx-auto py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold text-blue-900 mb-4">
+    Partner With Us
+  </h2>
+  <p class="text-gray-700 mb-6">
+    Work with MAJER ENTERPRISES for dependable and affordable printing solutions.
+  </p>
+  <a href="contact.html" class="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700">
+    Contact Us
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-10 text-center">
+  <p>&copy; 2026 MAJER ENTERPRISES. All rights reserved.</p>
+</footer>
+
+<script>
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+
+</body>
+</html>

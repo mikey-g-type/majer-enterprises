@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | MAJER ENTERPRISES</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(243,244,246,0.95), rgba(243,244,246,0.95)),
+                  url('assets/images/about.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .product-card {
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .product-img {
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-white/90 backdrop-blur shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center space-x-3">
+      <img src="assets/images/logo.png" class="w-10 h-10">
+      <h1 class="text-xl font-bold text-blue-900">MAJER ENTERPRISES</h1>
+    </div>
+
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="products.html" class="text-blue-600 font-semibold">Products</a>
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="hidden px-6 pb-4 md:hidden">
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="products.html" class="block py-2 font-semibold">Products</a>
+    <a href="about.html" class="block py-2">About</a>
+    <a href="contact.html" class="block py-2">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="text-white text-center py-24 px-6"
+  style="background: linear-gradient(rgba(27, 25, 24, 0.65), rgba(78, 82, 85, 0.65)),
+         url('assets/images/background.jpg');
+         background-size: cover;
+         background-position: center;">
+  
+  <h1 class="text-4xl md:text-5xl font-bold mb-3">Our Products</h1>
+  <p class="text-lg text-gray-200">
+    Reliable • Affordable • Quality Printing Supplies
+  </p>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="container mx-auto py-16 px-6">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+    <!-- PRODUCT -->
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh4001.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 80A Toner Cartridge</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 4,000</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh9500.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 87A LaserJet Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 9,500</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh6500.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 26A LaserJet Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 6,500</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh4000.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">Asta Toner Cartridge 17A</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 4,000</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh9000.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 415A LaserJet Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 9,000</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh8500.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 131A LaserJet Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 8,500</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh9001.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">HP 151A LaserJet Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 9,000</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh5000.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">Kyocera TK-475 Toner</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 5,000</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh1500.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">GT52 Inks</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 1,500</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+    <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg text-center p-6">
+      <img src="assets/images/ksh700.jpg" class="product-img mx-auto mb-4 h-36 object-contain">
+      <h3 class="font-semibold text-lg">Epson Inks</h3>
+      <p class="text-green-600 font-bold my-2 text-lg">KSh 700</p>
+      <a href="tel:+254735995075" class="block bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">
+        Call to Order
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-blue-900 text-white text-center py-16 px-6">
+  <h2 class="text-3xl font-bold mb-4">Need Help Finding the Right Product?</h2>
+  <p class="mb-6">Talk to our team anytime.</p>
+  <a href="contact.html" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold">
+    Contact Us
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-10 text-center">
+  <p>&copy; 2026 MAJER ENTERPRISES. All rights reserved.</p>
+</footer>
+
+<script>
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+
+</body>
+</html>
