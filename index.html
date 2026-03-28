@@ -223,13 +223,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobile-menu");
 
   menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+    if (mobileMenu.style.display === "block") {
+      mobileMenu.style.display = "none";
+    } else {
+      mobileMenu.style.display = "block";
+    }
   });
 
-  // Close menu when a link is clicked (mobile UX fix)
+  // Close when clicking a link
   document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
+      mobileMenu.style.display = "none";
     });
   });
 });
